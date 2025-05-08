@@ -34,6 +34,8 @@
   --dark-brown-color: oklch(0.39 0.0799 79.8);
   --deep-maroon-color: oklch(0.36 0.113 24.7);
   --light-cyan-color: oklch(0.97 0.0516 196.33);
+  --deep-teal-color: oklch(0.39 0.0507 195.27);
+  --light-beige-color: oklch(0.95 0.008 36.55);
 
   --system-ui:
     system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
@@ -64,6 +66,24 @@ button {
   margin: 0 auto;
 }
 
+.section__title {
+  font-weight: 900;
+  font-family: "Patrick Hand", var(--system-ui);
+  letter-spacing: 0.3ch;
+}
+
+.line {
+  margin: 1.5em 0em;
+  padding: 0.5px;
+  border: none;
+  border-radius: 1em;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /* === HEADER STYLES === */
 
 .header {
@@ -72,4 +92,29 @@ button {
   background: var(--mint-green-color);
   font-family: "Patrick Hand", var(--system-ui);
   letter-spacing: 0.5ch;
+  color: var(--dark-green-color);
+}
+
+/* === MAIN CONTENT STYLES === */
+
+/* --- PROJECTS SECTION CONTENT --- */
+
+.projects {
+  padding: 2em 0;
+  color: var(--deep-olive-color);
+  background: var(--light-green-color);
+  letter-spacing: 0.2ch;
+}
+
+.projects .line {
+  background: var(--deep-olive-color);
+}
+
+.create {
+  padding: 1em 2em;
+  background: var(--deep-teal-color);
+  color: var(--light-beige-color);
+  font-weight: bold;
+  letter-spacing: 0.2ch;
+  border-radius: 0.8em;
 }

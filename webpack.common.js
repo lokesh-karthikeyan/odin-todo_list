@@ -22,6 +22,10 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(woff|woff2)$/i,
+        type: "asset/resource",
+      },
     ],
   },
 };

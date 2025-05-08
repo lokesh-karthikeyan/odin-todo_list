@@ -33,6 +33,7 @@
   --deep-olive-color: oklch(0.34 0.0567 131.69);
   --dark-brown-color: oklch(0.39 0.0799 79.8);
   --deep-maroon-color: oklch(0.36 0.113 24.7);
+  --light-cyan-color: oklch(0.97 0.0516 196.33);
 
   --system-ui:
     system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
@@ -44,4 +45,31 @@
   --font-size-xl: 1.3125rem;
   --font-size-2xl: 1.5rem;
   --font-size-3xl: 2.652rem;
+}
+
+/* === BASE STYLES === */
+
+body {
+  font-family: "Delius", var(--system-ui);
+  background: var(--light-cyan-color);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* === HEADER STYLES === */
+
+.header {
+  padding: 1em 0;
+  font-weight: 900;
+  background: var(--mint-green-color);
+  font-family: "Patrick Hand", var(--system-ui);
+  letter-spacing: 0.5ch;
 }

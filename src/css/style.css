@@ -34,8 +34,10 @@
   --dark-brown-color: oklch(0.39 0.0799 79.8);
   --deep-maroon-color: oklch(0.36 0.113 24.7);
   --light-cyan-color: oklch(0.97 0.0516 196.33);
+  --muted-purple-color: oklch(0.45 0.09 280);
   --deep-teal-color: oklch(0.39 0.0507 195.27);
   --light-beige-color: oklch(0.95 0.008 36.55);
+  --deep-navy-color: oklch(0.24 0.11 250);
 
   --system-ui:
     system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
@@ -54,6 +56,9 @@
 body {
   font-family: "Delius", var(--system-ui);
   background: var(--light-cyan-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
@@ -62,8 +67,7 @@ button {
 }
 
 .container {
-  width: 80%;
-  margin: 0 auto;
+  margin: 0 2rem;
 }
 
 .section__title {
@@ -84,6 +88,13 @@ button {
   justify-content: center;
 }
 
+.create {
+  padding: 1em 2em;
+  font-weight: bold;
+  letter-spacing: 0.2ch;
+  border-radius: 0.8em;
+}
+
 /* === HEADER STYLES === */
 
 .header {
@@ -96,6 +107,10 @@ button {
 }
 
 /* === MAIN CONTENT STYLES === */
+
+.main {
+  flex-grow: 1;
+}
 
 /* --- PROJECTS SECTION CONTENT --- */
 
@@ -110,11 +125,33 @@ button {
   background: var(--deep-olive-color);
 }
 
-.create {
-  padding: 1em 2em;
+.project-button {
   background: var(--deep-teal-color);
   color: var(--light-beige-color);
-  font-weight: bold;
+}
+
+/* --- TODO SECTION CONTENT --- */
+
+.todo {
+  padding: 2em 0;
   letter-spacing: 0.2ch;
-  border-radius: 0.8em;
+  color: var(--deep-navy-color);
+}
+
+.todo .line {
+  background: var(--deep-navy-color);
+}
+
+.todo-button {
+  background: var(--muted-purple-color);
+  color: var(--light-beige-color);
+}
+
+/* === MEDIA QUERIES === */
+
+@media (width > 62.5em) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
 }

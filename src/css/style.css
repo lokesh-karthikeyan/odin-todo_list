@@ -1,0 +1,47 @@
+/* === DEFAULT | RESET STYLES === */
+
+@import "normalize.css";
+
+/* === CUSTOM WEB FONTS === */
+
+@font-face {
+  font-family: "Delius";
+  src:
+    url("../fonts/Delius-Regular.woff2") format("woff2"),
+    url("../fonts/Delius-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Patrick Hand";
+  src:
+    url("../fonts/PatrickHand-Regular.woff2") format("woff2"),
+    url("../fonts/PatrickHand-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* === GLOBAL VARIABLES === */
+
+:root {
+  --mint-green-color: oklch(0.83 0.0934 154.9);
+  --light-green-color: oklch(0.88 0.0818 133.72);
+  --pale-yellow-color: oklch(0.91 0.0777 94.74);
+  --soft-red-color: oklch(0.84 0.0661 18.55);
+  --dark-green-color: oklch(0.32 0.0417 162.75);
+  --deep-olive-color: oklch(0.34 0.0567 131.69);
+  --dark-brown-color: oklch(0.39 0.0799 79.8);
+  --deep-maroon-color: oklch(0.36 0.113 24.7);
+
+  --system-ui:
+    system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  --font-size-s: 0.875rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.125rem;
+  --font-size-xl: 1.3125rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2.652rem;
+}

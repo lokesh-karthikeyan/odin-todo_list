@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TOP | Todo List</title>
-    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
@@ -42,5 +41,29 @@
         </div>
       </section>
     </main>
+    <div class="modal-container">
+      <dialog class="project modal">
+        <h2 class="section__title">Projects</h2>
+        <hr class="line">
+        <form method="dialog" class="form">
+          <div class="form-control">
+            <label for="project-name" class="label">Name</label>
+            <input type="text" id="project-name" placeholder="Enter Project name..." required>
+          </div>
+          <div class="form-submit">
+            <button class="submit submit-button project">Create Project</button>
+          </div>
+        </form>
+      </dialog>
+    </div>
+    <template class="project-template">
+      <div class="project__details">
+        <p class="project__name"></p>
+        <div class="project__actions">
+          <button class="edit project">🖍</button>
+          <button class="remove project">🗑️</button>
+        </div>
+      </div>
+    </template>
   </body>
 </html>

@@ -176,6 +176,36 @@ button {
   color: var(--light-beige-color);
 }
 
+.project__details {
+  background: var(--soft-red-color);
+  color: var(--deep-maroon-color);
+  font-weight: 900;
+  font-size: clamp(var(--font-size-l), 2vw, var(--font-size-xl));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0.8em;
+  margin: 1em;
+  border-radius: 1em;
+}
+
+.project__name {
+  background: var(--soft-red-color);
+  color: var(--deep-maroon-color);
+}
+
+.project__actions {
+  border-left: solid 2px var(--deep-maroon-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5em;
+}
+
+.edit-button,
+.remove-button {
+  background: transparent;
+}
+
 /* --- TODO SECTION CONTENT --- */
 
 .todo {

@@ -55,13 +55,47 @@
           </div>
         </form>
       </dialog>
+      <dialog class="todo modal">
+        <h2 class="section__title">Todo</h2>
+        <hr class="line">
+        <form method="dialog" class="form">
+          <div class="form-control">
+            <label for="todo-title" class="label">Title</label>
+            <input type="text" id="todo-title" name="title" placeholder="Add title here..." required>
+          </div>
+          <div class="form-control">
+            <label for="todo-description" class="label">Description</label>
+            <textarea id="todo-description" name="description" placeholder="Add description here..." required></textarea>
+          </div>
+          <div class="form-control">
+            <label for="todo-dueDate" class="label">Due Date</label>
+            <input type="date" id="todo-dueDate" name="dueDate" placeholder="Add title here..." required>
+          </div>
+          <div class="form-control">
+            <label for="todo-priority" class="label">Choose Priority</label>
+            <select name="priority" id="todo-priority">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <div class="form-control">
+            <label for="todo-project" class="label">Select Project</label>
+            <select name="projectId" id="todo-project">
+            </select>
+          </div>
+          <div class="form-submit">
+            <button class="submit submit-button todo">Create Todo</button>
+          </div>
+        </form>
+      </dialog>
     </div>
     <template class="project-template">
       <div class="project__details">
-        <p class="project__name"></p>
+        <button class="project__name"></button>
         <div class="project__actions">
-          <button class="edit project">🖍</button>
-          <button class="remove project">🗑️</button>
+          <button class="edit-button project">🖍</button>
+          <button class="remove-button project">🗑️</button>
         </div>
       </div>
     </template>

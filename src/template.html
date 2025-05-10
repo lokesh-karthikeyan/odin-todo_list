@@ -33,10 +33,10 @@
         <div class="container">
           <h2 class="section__title">Todo 📝</h2>
           <hr class="line">
-          <div class="todo__list">
-          </div>
           <div class="wrapper">
             <button class="create todo-button">✚ Add Todo</button>
+          </div>
+          <div class="todo__list">
           </div>
         </div>
       </section>
@@ -96,6 +96,20 @@
         <div class="project__actions">
           <button class="edit-button project">🖍</button>
           <button class="remove-button project">🗑️</button>
+        </div>
+      </div>
+    </template>
+    <template class="todo-template">
+      <div class="todo__details">
+        <div class="todo__item">
+          <h2 class="todo__title"></h2>
+          <hr class="line">
+          <p class="todo__description"></p>
+        </div>
+        <div class="todo__actions">
+          <button class="todo-status"></button>
+          <button class="edit-button todo">🖍</button>
+          <button class="remove-button todo">🗑️</button>
         </div>
       </div>
     </template>

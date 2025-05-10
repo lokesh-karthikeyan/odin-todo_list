@@ -39,6 +39,9 @@
   --light-beige-color: oklch(0.95 0.008 36.55);
   --deep-navy-color: oklch(0.24 0.11 250);
   --submit-button-color: oklch(0.56 0.2255 262.09);
+  --low-priority: oklch(0.3 0.0222 249.62);
+  --medium-priority: oklch(0.64 0.2188 300.37);
+  --high-priority: oklch(0.65 0.2195 15.09);
 
   --system-ui:
     system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
@@ -245,6 +248,7 @@ button {
   justify-content: space-between;
   gap: 2em;
   align-items: center;
+  position: relative;
 }
 
 .todo__item {
@@ -284,6 +288,7 @@ button {
   background: oklch(0% 0 0 / 0.3);
   backdrop-filter: blur(0.5em);
   transition: background 0.4s ease;
+  z-index: 1;
 }
 
 .projects {
@@ -339,6 +344,10 @@ button {
   min-width: 25ch;
 }
 
+dialog.modal::backdrop {
+  backdrop-filter: blur(1rem);
+}
+
 .modal .line {
   background: var(--deep-olive-color);
 }
@@ -389,6 +398,65 @@ input[type="text"] {
   font-weight: bold;
   letter-spacing: 0.2ch;
   border-radius: 0.8em;
+}
+
+/* === ANIMATED BORDERS === */
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.todo__details::before,
+.todo__details::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 0.5em;
+  z-index: -1;
+  animation: 3s spin linear infinite;
+}
+
+.todo__details.low::before,
+.todo__details.low::after {
+  background: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    var(--low-priority)
+  );
+}
+
+.todo__details.medium::before,
+.todo__details.medium::after {
+  background: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    var(--medium-priority)
+  );
+}
+
+.todo__details.high::before,
+.todo__details.high::after {
+  background: conic-gradient(
+    from var(--angle),
+    transparent 50%,
+    var(--high-priority)
+  );
+}
+
+.todo__details::before {
+  opacity: 0.5;
+  filter: blur(1.5rem);
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
 
 /* === MEDIA QUERIES === */

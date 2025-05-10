@@ -11,6 +11,9 @@ const todoList = (function () {
       newTodo.querySelector(".todo-status").textContent = todo.status;
       newTodo.querySelector(".todo__details").id = todo.id;
       newTodo.querySelector(".todo__details").dataset.project = todo.projectId;
+      newTodo
+        .querySelector(".todo__details")
+        .classList.add(todo.priority.toLowerCase());
       todoListsContainer.append(newTodo);
     }
   };
@@ -23,6 +26,10 @@ const todoList = (function () {
       params.description;
     todoItemContainer.querySelector(".todo-status").textContent = params.status;
     todoItemContainer.dataset.project = params.projectId;
+    todoItemContainer.setAttribute(
+      "class",
+      `todo__details ${params.priority.toLowerCase()}`,
+    );
   };
 
   return { appendTodo, editTodo };

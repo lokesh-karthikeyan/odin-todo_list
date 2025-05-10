@@ -206,6 +206,16 @@ button {
   background: transparent;
 }
 
+.all-todos {
+  background: var(--light-cyan-color);
+  border-radius: 0.8em;
+  color: var(--deep-navy-color);
+  padding: 1em 1.5em;
+  font-family: "Patrick Hand", var(--system-ui);
+  font-weight: bold;
+  letter-spacing: 0.2ch;
+}
+
 /* --- TODO SECTION CONTENT --- */
 
 .todo {
